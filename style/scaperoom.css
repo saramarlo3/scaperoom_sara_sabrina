@@ -1,0 +1,96 @@
+/* Fuente de fontspace.com, sólo para uso personal */
+@font-face {
+  font-family: "ComicKids-WyvKG";
+  src: url("../fonts/ComicKids-WyvKG.otf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh; /* asegura que body llene la pantalla */
+  background: linear-gradient(120deg, #f6d365, #fda085, #fbc2eb, #a6c1ee);
+  font-family: "ComicKids-WyvKG";
+}
+
+/* FIJAMOS el ancho y la posición de la escena y de los mensajes */
+.escena {
+  width: 80%;
+  max-width: 960px;
+  height: auto;                /* se adapta a la imagen */
+  display: block;
+  margin: 0 auto;              /* centrado horizontal */
+  background-image: url("../img/mansion.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mensaje {
+  width: 80%;
+  max-width: 960px;
+  display: block;
+  margin: -3px auto 0 auto;    /* top -3px para pegar */
+  background-color: white;
+  padding: 3px;
+}
+
+
+/* La escena tendrá como fondo la mansión, ¡¡ sólo al cargar la página !! */
+.escena {
+    width: 80%;          /* ancho relativo al contenedor o ventana */
+  max-width: 960px;    /* opcional: límite máximo si quieres */
+  height: auto;        /* se adapta a la proporción de la imagen */
+  display: block;
+  margin: 0 auto;
+  height: 784px;
+  margin: auto;
+  background-image: url("../img/mansion.jpg"); /* Imagen de Wombo Dream */
+  background-size:cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.mensaje p {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.puerta {
+  width: 14px;
+  height: 49px;
+  background-color: transparent;
+  position: absolute;
+  left:304px;
+  top: 479px;
+}
+.interruptor {
+  display: none; /* Inicialmente no se verá el interruptor */
+  width: 16px;
+  height: 34px;
+  background-image: url("../img/interruptor_oscuro.png"); /* Imagen de Wombo Dream manipulada con GIMP */
+  background-size: cover;
+  position: absolute;
+  left:385px;
+  top: 402px;
+}
+/* Coloca la pata en la escena de forma discreta, que no se vea fácil*/
+.pata {
+  display: none; /* Inicialmente no se verá la pata */
+  width: 11px;
+  height: 12px;
+  background-image: url("../img/pata.png"); /* Imagen de Wombo Dream manipulada con GIMP */
+  background-size: cover;
+  position: absolute;
+  left:346px;
+  top: 607px;
+}
+/* Este es Togo, visualízado encima de la alfombra */
+.togo {
+ /* PON AQUÍ EL CSS DE TOGO */
+ display: none; /* Inicialmente no se visualiza */
+}
