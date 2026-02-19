@@ -1,10 +1,10 @@
 /*
 * ESCENAS:
-*   - ESCENA1: Se ve la mansión
-*   - ESCENA2: Se ve el sótano sin luz
-*   - ESCENA3: Se ve el sótano encendido
-*   - ESCENA4: Se ve a Togo en el sótano encendido
-*   - ESCENA5: Idea alguna escena más. Incorpora nuevos objetos que activen eventos.
+*   - ESCENA1: Se ve la pizarra del aula Ateca, com si fuese una alumna
+*   - ESCENA2: Se ve la pizarra ampliada
+*   - ESCENA3: Se ve el pasillo
+*   - ESCENA4: Se ve el departamento de informática
+*   - ESCENA5: Se ve el baño
 */
 
 /*
@@ -16,7 +16,7 @@
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
 function entra() {
   // Cambio la imagen de fondo cuando entro en la mansión.
-  document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
+  document.getElementById("principal").style.backgroundImage = "url(img/Escenario1Placeholder.png)";
   // Oculto la puerta, ya no vamos a utilizarla
   document.getElementById("puerta").style.display = "none";
   // Muestro el interruptor, no se verá muy bien
@@ -48,3 +48,35 @@ function saleTogo() {
   // Cambio el mensaje del bocadillo.
 }
 // Desde ESCENA4: Idea un nuevo evento que desencadene alguna acción en tu página
+
+
+
+
+function pizarra(){
+document.getElemtById("pizarra").style.backgroundImage = "url(img/ imagen de la pizarra)"
+acertijo();
+
+
+}
+
+function acertijoPizarra(){
+
+
+
+  
+}
+
+
+function papel(){
+  document.getElemtById("papel").style.backgroundImage = "url(img/imagen del papel)";
+  
+
+
+}
+
+function pasillo(){
+document.getElementById()
+
+
+
+}
