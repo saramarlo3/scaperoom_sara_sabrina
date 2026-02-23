@@ -15,8 +15,16 @@
 
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
 function entra() {
+
+//Esta funcion es para que no se pueda hacer zoom con el control
+document.addEventListener('wheel', function (e) {
+  if (e.ctrlKey) {
+    e.preventDefault();
+  }
+}, { passive: false });
+  
   // Cambio la imagen de fondo cuando entro en la mansión.
-  document.getElementById("principal").style.backgroundImage = "url(img/Escenario1Placeholder.png)";
+  document.getElementById("principal").style.backgroundImage = "url(img/Escenario1.png)";
   // Oculto la puerta, ya no vamos a utilizarla
   document.getElementById("puerta").style.display = "none";
   // Muestro el interruptor, no se verá muy bien
