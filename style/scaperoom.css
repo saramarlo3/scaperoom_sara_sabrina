@@ -1,36 +1,66 @@
-/* Fuente de fontspace.com, sólo para uso personal */
 @font-face {
-  font-family: "Lovely Rose";
-  src: url("../fonts/Lovely\ Rose.otf");
+  font-family: "Gamer";
+  src: url(../fonts/Gamer.ttf);
 }
+
+* {
+  font-family: Gamer;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
 body {
   background: radial-gradient(#863F35, #357D86);
+  margin: 0px;
 }
-/* FIJAMOS el ancho y la posición de la escena y de los mensajes */
+
+/* La Escena 1 tendrá como fondo el aula */
+.escena {
+  min-height: 100dvh;
+  background-image: url("../img/Escenario1.PNG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.mensaje {
+  font-family: Gamer;
+  position: absolute;
+  background-color: lightgoldenrodyellow;
+  bottom: 0;
+  width: 100%;
+  padding-left: 3%;
+  color: black;
+  border-top: black solid;
+  font-size: xxx-large;
+}
+
+/* CSS DE REFERENCIA
+
+//FIJAMOS el ancho y la posición de la escena y de los mensajes
+
 .escena, .mensaje {
-  width: 1800px;
+  width: 480px;
   margin: auto;
- 
-  
 }
-/* La escena tendrá como fondo la mansión, ¡¡ sólo al cargar la página !! */
+
+//La escena tendrá como fondo la mansión, ¡¡ sólo al cargar la página !!
+
 .escena {
   height: 784px;
   margin: auto;
-  margin-top: 3%;
-  background-image: url("../img/Escenario1Placeholder.png"); /* Imagen de Wombo Dream */
+  background-image: url("../img/mansion.jpg"); /* Imagen de Wombo Dream
   background-size:cover;
   position: relative;
 }
 .mensaje {
-  font-family: "Lovely Rose";
+  font-family: "ComicKids-WyvKG";
   background-color: white;
   padding: 3px;
-  height: 100px;
-margin-bottom: 3%;
-font-size: x-large;
-text-align: center;
-  
 }
 
 .mensaje p {
@@ -46,28 +76,31 @@ text-align: center;
   top: 479px;
 }
 .interruptor {
-  display: none; /* Inicialmente no se verá el interruptor */
+  display: none; /* Inicialmente no se verá el interruptor
   width: 16px;
   height: 34px;
-  background-image: url("../img/interruptor_oscuro.png"); /* Imagen de Wombo Dream manipulada con GIMP */
+  background-image: url("../img/interruptor_oscuro.png");
   background-size: cover;
   position: absolute;
   left:385px;
   top: 402px;
 }
-/* Coloca la pata en la escena de forma discreta, que no se vea fácil*/
+// Coloca la pata en la escena de forma discreta, que no se vea fácil
 .pata {
-  display: none; /* Inicialmente no se verá la pata */
+  display: none; //Inicialmente no se verá la pata
   width: 11px;
   height: 12px;
-  background-image: url("../img/pata.png"); /* Imagen de Wombo Dream manipulada con GIMP */
+  background-image: url("../img/pata.png"); 
   background-size: cover;
   position: absolute;
   left:346px;
   top: 607px;
 }
-/* Este es Togo, visualízado encima de la alfombra */
+
+// Este es Togo, visualízado encima de la alfombr
 .togo {
- /* PON AQUÍ EL CSS DE TOGO */
- display: none; /* Inicialmente no se visualiza */
+ //PON AQUÍ EL CSS DE TOGO
+ display: none; /* Inicialmente no se visualiza
 }
+
+*/
