@@ -15,16 +15,8 @@
 
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
 function entra() {
-
-//Esta funcion es para que no se pueda hacer zoom con el control
-document.addEventListener('wheel', function (e) {
-  if (e.ctrlKey) {
-    e.preventDefault();
-  }
-}, { passive: false });
-  
   // Cambio la imagen de fondo cuando entro en la mansión.
-  document.getElementById("principal").style.backgroundImage = "url(img/Escenario1.png)";
+  document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
   // Oculto la puerta, ya no vamos a utilizarla
   document.getElementById("puerta").style.display = "none";
   // Muestro el interruptor, no se verá muy bien
@@ -34,6 +26,21 @@ document.addEventListener('wheel', function (e) {
   document.getElementById("parrafo2").innerHTML = "Al bajar, se cierra la puerta y te quedas a oscuras.";
   document.getElementById("parrafo3").innerHTML = "Busca un interruptor";
 }
+
+//Esta funcion es para que no se pueda hacer zoom con el control
+document.addEventListener('wheel', function (e) {
+  if (e.ctrlKey) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+document.getElementById("puertaBanio").style.display = "none";
+document.getElementById("puerta1").style.display = "none";
+document.getElementById("puertaIT").style.display = "none";
+document.getElementById("zonaVentana").style.display = "none";
+document.getElementById("ventana").style.display = "none";
+
+
 // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
 function enciende() {
   // Cambio la imagen de fondo cuando enciendo la luz
@@ -60,30 +67,45 @@ function saleTogo() {
 
 
 
-function pizarra(){
-document.getElemtById("pizarra").style.backgroundImage = "url(img/ imagen de la pizarra)"
-acertijo();
+function pizarra() {
+  document.getElementById("principal").style.display = "none";
+  document.getElementById("pizarraGrande").style.display = "block";
+document.getElementById("parrafo1").innerHTML = "Debería buscar la llacve de la puerta";
+ 
+
+ 
+
+
+
+}
+function noPizarra(){
+  document.getElementById("principal").style.display = "block";
+  document.getElementById("pizarraGrande").style.display = "none";
 
 
 }
 
-function acertijoPizarra(){
+function papel() {
+  document.getElementById("papel").style.backgroundImage = "url(img/imagen del papel)";
 
 
 
+}
+
+
+
+ function corcho() {
+
+  document.getElementById("principal").style.backgroundImage = "url(img/imagen_fondo_con_llave.jpg)";
   
+  document.getElementById("parrafo1").innerHTML = "La llave de la puerta!!";
 }
 
 
-function papel(){
-  document.getElemtById("papel").style.backgroundImage = "url(img/imagen del papel)";
-  
 
 
-}
+function pasillo() {
 
-function pasillo(){
-document.getElementById()
 
 
 

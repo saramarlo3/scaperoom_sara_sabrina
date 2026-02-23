@@ -27,6 +27,10 @@ body {
   position: relative;
 }
 
+#pizarraGrande {
+  height: 100dvh;
+  position: relative;
+}
 .mensaje {
   font-family: Gamer;
   position: absolute;
@@ -37,6 +41,32 @@ body {
   color: black;
   border-top: black solid;
   font-size: xxx-large;
+}
+.pizarra {
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  position: absolute;
+  left:21%;
+  top: 4%;
+ 
+}
+.papel {
+  width: 3%;
+  height: 2.5%;
+  background-color: transparent;
+  position: absolute;
+  right:30%;
+  top: 53%;
+}
+.corcho{
+ width: 3%;
+  height: 8%;
+  background-color: transparent;
+  position: absolute;
+right: 2%;
+  top: 20%;
+
 }
 
 /* CSS DE REFERENCIA
