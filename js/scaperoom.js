@@ -14,18 +14,18 @@
 */
 
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
-function entra() {
-  // Cambio la imagen de fondo cuando entro en la mansión.
-  document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
-  // Oculto la puerta, ya no vamos a utilizarla
-  document.getElementById("puerta").style.display = "none";
-  // Muestro el interruptor, no se verá muy bien
-  document.getElementById("interruptor").style.display = "block";
-  // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "Oyes a Togo en el sótano.";
-  document.getElementById("parrafo2").innerHTML = "Al bajar, se cierra la puerta y te quedas a oscuras.";
-  document.getElementById("parrafo3").innerHTML = "Busca un interruptor";
-}
+// function entra() {
+//   // Cambio la imagen de fondo cuando entro en la mansión.
+//   document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
+//   // Oculto la puerta, ya no vamos a utilizarla
+//   document.getElementById("puerta").style.display = "none";
+//   // Muestro el interruptor, no se verá muy bien
+//   document.getElementById("interruptor").style.display = "block";
+//   // Cambio el mensaje del bocadillo
+//   document.getElementById("parrafo1").innerHTML = "Oyes a Togo en el sótano.";
+//   document.getElementById("parrafo2").innerHTML = "Al bajar, se cierra la puerta y te quedas a oscuras.";
+//   document.getElementById("parrafo3").innerHTML = "Busca un interruptor";
+// }
 
 //Esta funcion es para que no se pueda hacer zoom con el control
 document.addEventListener('wheel', function (e) {
@@ -41,71 +41,100 @@ document.getElementById("zonaVentana").style.display = "none";
 document.getElementById("ventana").style.display = "none";
 
 
-// Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
-function enciende() {
-  // Cambio la imagen de fondo cuando enciendo la luz
-  document.getElementById("principal").style.backgroundImage = "url(img/sotanoEncendido.jpg)";
-  // Ponemos la imagen del interruptor más nítido
-  document.getElementById("interruptor").style.backgroundImage = "url(img/interruptor.png)";
-  // Evitamos que el interruptor vuelva a ser pulsado, desactivando los eventos de ratón
-  document.getElementById("interruptor").style.pointerEvents = "none";
-  // Mostramos la pata de Togo
-  document.getElementById("pata").style.display = "block";
-  // Cambio el mensaje del bocadillo
-  document.getElementById("parrafo1").innerHTML = "Ahora que ves bien, puedes buscar a Togo";
-  document.getElementById("parrafo2").innerHTML = "¿Dónde puede estar?";
-  document.getElementById("parrafo3").innerHTML = "";
-}
-// Desde ESCENA3: Al hacer click en la pata de Togo, aparece el perro
-function saleTogo() {
-  // Ocultamos la pata de Togo
-  // Mostramos a Togo encima de la alfombra
-  // Cambio el mensaje del bocadillo.
-}
-// Desde ESCENA4: Idea un nuevo evento que desencadene alguna acción en tu página
+// // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
+// function enciende() {
+//   // Cambio la imagen de fondo cuando enciendo la luz
+//   document.getElementById("principal").style.backgroundImage = "url(img/sotanoEncendido.jpg)";
+//   // Ponemos la imagen del interruptor más nítido
+//   document.getElementById("interruptor").style.backgroundImage = "url(img/interruptor.png)";
+//   // Evitamos que el interruptor vuelva a ser pulsado, desactivando los eventos de ratón
+//   document.getElementById("interruptor").style.pointerEvents = "none";
+//   // Mostramos la pata de Togo
+//   document.getElementById("pata").style.display = "block";
+//   // Cambio el mensaje del bocadillo
+//   document.getElementById("parrafo1").innerHTML = "Ahora que ves bien, puedes buscar a Togo";
+//   document.getElementById("parrafo2").innerHTML = "¿Dónde puede estar?";
+//   document.getElementById("parrafo3").innerHTML = "";
+// }
+// // Desde ESCENA3: Al hacer click en la pata de Togo, aparece el perro
+// function saleTogo() {
+//   // Ocultamos la pata de Togo
+//   // Mostramos a Togo encima de la alfombra
+//   // Cambio el mensaje del bocadillo.
+// }
+// // Desde ESCENA4: Idea un nuevo evento que desencadene alguna acción en tu página
 
 
 
 
 function pizarra() {
+
   document.getElementById("principal").style.display = "none";
   document.getElementById("pizarraGrande").style.display = "block";
-document.getElementById("parrafo1").innerHTML = "Debería buscar la llacve de la puerta";
- 
-
- 
+    document.getElementById("pizarraGrande").backgroundImage= "url('img/pizarra.png')";
+  document.getElementById("parrafo1").innerHTML = "Debería buscar la llave de la puerta";
 
 
 
 }
-function noPizarra(){
+function noPizarra() {
+
   document.getElementById("principal").style.display = "block";
   document.getElementById("pizarraGrande").style.display = "none";
-
+  document.getElementById("parrafo1").style.display = "none";
 
 }
+
+
+
+
+
+
+
+
+
+
 
 function papel() {
-  document.getElementById("papel").style.backgroundImage = "url(img/imagen del papel)";
 
+  document.getElementById("principal").style.display = "none";
+  document.getElementById("papelGrande").style.display = "block";
+  document.getElementById("parrafo1").style.display = "none";
+
+
+
+}
+function noPapel() {
+  document.getElementById("principal").style.display = "block";
+  document.getElementById("papelGrande").style.display = "none";
 
 
 }
 
 
 
- function corcho() {
+function corcho() {
 
-  document.getElementById("principal").style.backgroundImage = "url(img/imagen_fondo_con_llave.jpg)";
-  
-  document.getElementById("parrafo1").innerHTML = "La llave de la puerta!!";
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena1.png)";
+  // cambiar la imagen por el fondo con la llave
+
+  document.getElementById("parrafo1").innerHTML = "!La llave de la puerta!!";
+  document.getElementById("corcho").style.display = "none";
+  document.getElementById("llave").style.display = "block";
+
+
+
 }
 
 
 
 
 function pasillo() {
-
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena2.png)"
+  document.getElementById("bocadillo").style.display = "none";
+  document.getElementById("puertaBanio").style.display = "block";
+  document.getElementById("puerta1").style.display = "block";
+  document.getElementById("puertaIT").style.display = "block";
 
 
 

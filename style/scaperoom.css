@@ -20,7 +20,7 @@ body {
 /* La Escena 1 tendrá como fondo el aula */
 .escena {
   min-height: 100dvh;
-  background-image: url("../img/Escenario1.PNG");
+  background-image: url("../img/Escena1.PNG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,9 +28,22 @@ body {
 }
 
 #pizarraGrande {
+
   height: 100dvh;
+  width: 100vw;
   position: relative;
+
 }
+
+#papelGrande {
+
+  height: 100dvh;
+  width: 100vw;
+  position: relative;
+
+
+}
+
 .mensaje {
   font-family: Gamer;
   position: absolute;
@@ -42,29 +55,42 @@ body {
   border-top: black solid;
   font-size: xxx-large;
 }
+
 .pizarra {
   width: 30%;
   height: 30%;
   background-color: transparent;
   position: absolute;
-  left:21%;
+  left: 21%;
   top: 4%;
- 
+
 }
+
 .papel {
   width: 3%;
   height: 2.5%;
   background-color: transparent;
   position: absolute;
-  right:30%;
+  right: 30%;
   top: 53%;
 }
-.corcho{
- width: 3%;
+
+.corcho {
+  width: 3%;
   height: 8%;
   background-color: transparent;
   position: absolute;
-right: 2%;
+  right: 2%;
+  top: 20%;
+
+}
+
+.llave {
+  width: 1.5%;
+  height: 4%;
+  background-color: transparent;
+  position: absolute;
+  right: 2%;
   top: 20%;
 
 }
