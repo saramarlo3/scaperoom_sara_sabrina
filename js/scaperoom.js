@@ -17,7 +17,50 @@
 // function entra() {
 //   // Cambio la imagen de fondo cuando entro en la mansión.
 //   document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
-//   // Oculto la puerta, ya no vamos a utilizarla
+//   // Oculto la ptById("parrafo1").style.display = "block";
+  document.getElementById("parrafo1").innerHTML = "¡¡La llave de la puerta de aula!!";
+  document.getElementById("corcho").style.display = "none";
+  document.getElementById("llave").style.display = "block";
+
+
+
+}
+
+
+
+
+function pasillo() {
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena2.png)"
+  document.getElementById("parrafo1").style.display = "none";
+  document.getElementById("puertaBanio").style.display = "block";
+  document.getElementById("puerta1").style.display = "block";
+   document.getElementById("puerta2").style.display = "block";
+  document.getElementById("puertaIT").style.display = "block";
+   document.getElementById("llave").style.display = "none";
+  
+  
+
+
+
+}
+
+function puertaCerrada(){
+  const elemento = document.getElementById("parrafo1");
+  let oculto = document.getElementById("parrafo1").style.display;
+  document.getElementById("parrafo1").style.display = "block";
+
+const contenidoOriginal = elemento.innerHTML;
+elemento.innerHTML = "Oh, vaya! Está cerrada";
+setTimeout(() => {
+    elemento.innerHTML = contenidoOriginal;
+    if (oculto == "none") {
+      document.getElementById("parrafo1").style.display = "none";
+    }
+}, 3000);
+
+
+
+}uerta, ya no vamos a utilizarla
 //   document.getElementById("puerta").style.display = "none";
 //   // Muestro el interruptor, no se verá muy bien
 //   document.getElementById("interruptor").style.display = "block";
@@ -35,10 +78,14 @@ document.addEventListener('wheel', function (e) {
 }, { passive: false });
 
 document.getElementById("puertaBanio").style.display = "none";
+document.getElementById("parrafo1").style.display = "none";
 document.getElementById("puerta1").style.display = "none";
+document.getElementById("puerta2").style.display = "none";
 document.getElementById("puertaIT").style.display = "none";
 document.getElementById("zonaVentana").style.display = "none";
 document.getElementById("ventana").style.display = "none";
+document.getElementById("llave").style.display = "none";
+
 
 
 // // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
@@ -71,8 +118,10 @@ function pizarra() {
 
   document.getElementById("principal").style.display = "none";
   document.getElementById("pizarraGrande").style.display = "block";
-    document.getElementById("pizarraGrande").backgroundImage= "url('img/pizarra.png')";
+    document.getElementById("pizarraGrande").style.backgroundImage= "url('img/pizarra.png')";
+    document.getElementById("parrafo1").style.display = "block";
   document.getElementById("parrafo1").innerHTML = "Debería buscar la llave de la puerta";
+  
 
 
 
@@ -117,8 +166,8 @@ function corcho() {
 
   document.getElementById("principal").style.backgroundImage = "url(img/Escena1.png)";
   // cambiar la imagen por el fondo con la llave
-
-  document.getElementById("parrafo1").innerHTML = "!La llave de la puerta!!";
+ document.getElementById("parrafo1").style.display = "block";
+  document.getElementById("parrafo1").innerHTML = "¡¡La llave de la puerta de aula!!";
   document.getElementById("corcho").style.display = "none";
   document.getElementById("llave").style.display = "block";
 
@@ -131,10 +180,32 @@ function corcho() {
 
 function pasillo() {
   document.getElementById("principal").style.backgroundImage = "url(img/Escena2.png)"
-  document.getElementById("bocadillo").style.display = "none";
+  document.getElementById("parrafo1").style.display = "none";
   document.getElementById("puertaBanio").style.display = "block";
   document.getElementById("puerta1").style.display = "block";
+   document.getElementById("puerta2").style.display = "block";
   document.getElementById("puertaIT").style.display = "block";
+   document.getElementById("llave").style.display = "none";
+  
+  
+
+
+
+}
+
+function puertaCerrada(){
+  const elemento = document.getElementById("parrafo1");
+  let oculto = document.getElementById("parrafo1").style.display;
+  document.getElementById("parrafo1").style.display = "block";
+
+const contenidoOriginal = elemento.innerHTML;
+elemento.innerHTML = "Oh, vaya! Está cerrada";
+setTimeout(() => {
+    elemento.innerHTML = contenidoOriginal;
+    if (oculto == "none") {
+      document.getElementById("parrafo1").style.display = "none";
+    }
+}, 3000);
 
 
 
