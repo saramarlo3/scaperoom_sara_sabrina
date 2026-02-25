@@ -35,6 +35,7 @@ document.addEventListener('wheel', function (e) {
 }, { passive: false });
 
 document.getElementById("puertaBanio").style.display = "none";
+document.getElementById("puertaBanioAbierta").style.display = "none";
 document.getElementById("parrafo1").style.display = "none";
 document.getElementById("puerta1").style.display = "none";
 document.getElementById("puerta2").style.display = "none";
@@ -168,3 +169,27 @@ setTimeout(() => {
 
 }
 
+function necesitoLlave() {
+const elemento = document.getElementById("parrafo1");
+  let oculto = document.getElementById("parrafo1").style.display;
+  document.getElementById("parrafo1").style.display = "block";
+
+const contenidoOriginal = elemento.innerHTML;
+elemento.innerHTML = "Necesito una llave para abrirla";
+setTimeout(() => {
+    elemento.innerHTML = contenidoOriginal;
+    if (oculto == "none") {
+      document.getElementById("parrafo1").style.display = "none";
+    }
+}, 3000);
+
+
+
+
+
+
+
+
+
+
+}
