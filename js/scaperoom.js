@@ -13,19 +13,6 @@
 *  las rutas relativas en un JavaScript, aunque esté en fichero aparte, lo son desde la raiz del proyecto !!!!!
 */
 
-// Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
-// function entra() {
-//   // Cambio la imagen de fondo cuando entro en la mansión.
-//   document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
-//   // Oculto la puerta, ya no vamos a utilizarla
-//   document.getElementById("puerta").style.display = "none";
-//   // Muestro el interruptor, no se verá muy bien
-//   document.getElementById("interruptor").style.display = "block";
-//   // Cambio el mensaje del bocadillo
-//   document.getElementById("parrafo1").innerHTML = "Oyes a Togo en el sótano.";
-//   document.getElementById("parrafo2").innerHTML = "Al bajar, se cierra la puerta y te quedas a oscuras.";
-//   document.getElementById("parrafo3").innerHTML = "Busca un interruptor";
-// }
 
 //Esta funcion es para que no se pueda hacer zoom con el control
 document.addEventListener('wheel', function (e) {
@@ -34,54 +21,41 @@ document.addEventListener('wheel', function (e) {
   }
 }, { passive: false });
 
+let tieneLlaveBanio = false;
+let estaAbiertoElBanio = false; 
+
 document.getElementById("puertaBanio").style.display = "none";
 document.getElementById("puertaBanioAbierta").style.display = "none";
 document.getElementById("parrafo1").style.display = "none";
 document.getElementById("puerta1").style.display = "none";
 document.getElementById("puerta2").style.display = "none";
 document.getElementById("puertaIT").style.display = "none";
-document.getElementById("zonaVentana").style.display = "none";
-document.getElementById("ventana").style.display = "none";
+document.getElementById("ventanaIT").style.display = "none";
+document.getElementById("ventanaBanio").style.display = "none";
 document.getElementById("llave").style.display = "none";
+document.getElementById("flecha1").style.display = "none";
+document.getElementById("flecha2").style.display = "none";
+document.getElementById("llaveBanio").style.display = "none";
+document.getElementById("barra").style.display = "none";
+document.getElementById("inventario").style.display = "none";
 
 
 
-// // Desde ESCENA2: Al hacer click en el interruptor, se enciende la luz... Sólo si estaba apagada
-// function enciende() {
-//   // Cambio la imagen de fondo cuando enciendo la luz
-//   document.getElementById("principal").style.backgroundImage = "url(img/sotanoEncendido.jpg)";
-//   // Ponemos la imagen del interruptor más nítido
-//   document.getElementById("interruptor").style.backgroundImage = "url(img/interruptor.png)";
-//   // Evitamos que el interruptor vuelva a ser pulsado, desactivando los eventos de ratón
-//   document.getElementById("interruptor").style.pointerEvents = "none";
-//   // Mostramos la pata de Togo
-//   document.getElementById("pata").style.display = "block";
-//   // Cambio el mensaje del bocadillo
-//   document.getElementById("parrafo1").innerHTML = "Ahora que ves bien, puedes buscar a Togo";
-//   document.getElementById("parrafo2").innerHTML = "¿Dónde puede estar?";
-//   document.getElementById("parrafo3").innerHTML = "";
-// }
-// // Desde ESCENA3: Al hacer click en la pata de Togo, aparece el perro
-// function saleTogo() {
-//   // Ocultamos la pata de Togo
-//   // Mostramos a Togo encima de la alfombra
-//   // Cambio el mensaje del bocadillo.
-// }
-// // Desde ESCENA4: Idea un nuevo evento que desencadene alguna acción en tu página
 
 
 
+
+
+
+//Escena 1, clase
 
 function pizarra() {
 
   document.getElementById("principal").style.display = "none";
   document.getElementById("pizarraGrande").style.display = "block";
-    document.getElementById("pizarraGrande").style.backgroundImage= "url('img/pizarra.png')";
-    document.getElementById("parrafo1").style.display = "block";
+  document.getElementById("pizarraGrande").style.backgroundImage = "url('img/pizarra.png')";
+  document.getElementById("parrafo1").style.display = "block";
   document.getElementById("parrafo1").innerHTML = "Debería buscar la llave de la puerta";
-  
-
-
 
 }
 function noPizarra() {
@@ -93,22 +67,12 @@ function noPizarra() {
 }
 
 
-
-
-
-
-
-
-
-
-
 function papel() {
 
   document.getElementById("principal").style.display = "none";
   document.getElementById("papelGrande").style.display = "block";
+  document.getElementById("papelGrande").style.backgroundImage = "url('img/papel.png')";
   document.getElementById("parrafo1").style.display = "none";
-
-
 
 }
 function noPapel() {
@@ -119,16 +83,14 @@ function noPapel() {
 }
 
 
-
 function corcho() {
 
   document.getElementById("principal").style.backgroundImage = "url(img/Escena1.png)";
   // cambiar la imagen por el fondo con la llave
- document.getElementById("parrafo1").style.display = "block";
-  document.getElementById("parrafo1").innerHTML = "¡¡La llave de la puerta de aula!!";
   document.getElementById("corcho").style.display = "none";
   document.getElementById("llave").style.display = "block";
-
+  document.getElementById("parrafo1").style.display = "block";
+  document.getElementById("parrafo1").innerHTML = "¡¡La llave de la puerta de aula!!";
 
 
 }
@@ -136,60 +98,165 @@ function corcho() {
 
 
 
+
+
+
+//Escena 2,pasillo
+
 function pasillo() {
+
+  document.getElementById("pizarra").style.display = "none";
+  document.getElementById("papel").style.display = "none";
+  document.getElementById("corcho").style.display = "none";
+  document.getElementById("llave").style.display = "none";
+  document.getElementById("puertaIT").style.display = "none";
+  document.getElementById("flecha2").style.display = "none";
+  document.getElementById("ventanaIT").style.display = "none";
   document.getElementById("principal").style.backgroundImage = "url(img/Escena2.png)"
   document.getElementById("parrafo1").style.display = "none";
   document.getElementById("puertaBanio").style.display = "block";
   document.getElementById("puerta1").style.display = "block";
-   document.getElementById("puerta2").style.display = "block";
-  document.getElementById("puertaIT").style.display = "block";
-   document.getElementById("llave").style.display = "none";
-  
-  
+  document.getElementById("puerta2").style.display = "block";
+
+  document.getElementById("flecha1").style.display = "block";
+   document.getElementById("llaveBanio").style.display = "none";
+
+  document.getElementById("barra").style.display = "none";
+
+
 
 
 
 }
 
-function puertaCerrada(){
+function puertaCerrada() {
   const elemento = document.getElementById("parrafo1");
   let oculto = document.getElementById("parrafo1").style.display;
   document.getElementById("parrafo1").style.display = "block";
 
-const contenidoOriginal = elemento.innerHTML;
-elemento.innerHTML = "Oh, vaya! Está cerrada";
-setTimeout(() => {
+  const contenidoOriginal = elemento.innerHTML;
+  elemento.innerHTML = "Oh, vaya! Está cerrada";
+  setTimeout(() => {
     elemento.innerHTML = contenidoOriginal;
     if (oculto == "none") {
       document.getElementById("parrafo1").style.display = "none";
     }
-}, 3000);
+  }, 3000);
 
 
 
 }
 
 function necesitoLlave() {
-const elemento = document.getElementById("parrafo1");
-  let oculto = document.getElementById("parrafo1").style.display;
-  document.getElementById("parrafo1").style.display = "block";
+  if (estaAbiertoElBanio) {
+    EscenaBanio(); // ← nombre correcto de tu función
+  } else if (tieneLlaveBanio) {
+    document.getElementById("slot1").style.backgroundImage = "none";
+    tieneLlaveBanio = false;
+    estaAbiertoElBanio = true;
+    EscenaBanio(); // ← nombre correcto de tu función
+  } else {
+    const elemento = document.getElementById("parrafo1");
+    let oculto = elemento.style.display;
+    elemento.style.display = "block";
+    const contenidoOriginal = elemento.innerHTML;
+    elemento.innerHTML = "Necesito una llave para abrirla";
+    setTimeout(() => {
+      elemento.innerHTML = contenidoOriginal;
+      if (oculto == "none") elemento.style.display = "none";
+    }, 3000);
+  }
+}
 
-const contenidoOriginal = elemento.innerHTML;
-elemento.innerHTML = "Necesito una llave para abrirla";
-setTimeout(() => {
-    elemento.innerHTML = contenidoOriginal;
-    if (oculto == "none") {
-      document.getElementById("parrafo1").style.display = "none";
-    }
-}, 3000);
-
-
-
-
-
+function pasilloMini() {
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena3.png)"
+  document.getElementById("puerta1").style.display = "none";
+  document.getElementById("puerta2").style.display = "none";
+  document.getElementById("flecha1").style.display = "none";
+  document.getElementById("puertaBanio").style.display = "none";
+  document.getElementById("puertaIT").style.display = "block";
+  document.getElementById("flecha2").style.display = "block";
+  document.getElementById("ventanaIT").style.display = "block";
+  document.getElementById("llaveBanio").style.display = "none";
+  document.getElementById("flecha3").style.display = "none";
+  document.getElementById("barra").style.display = "none";
 
 
 
 
 
 }
+
+function verVentanaIT() {
+
+  const elemento = document.getElementById("parrafo1");
+  let oculto = document.getElementById("parrafo1").style.display;
+  document.getElementById("parrafo1").style.display = "block";
+
+  const contenidoOriginal = elemento.innerHTML;
+  elemento.innerHTML = "El departamento de informática";
+  setTimeout(() => {
+    elemento.innerHTML = contenidoOriginal;
+    if (oculto == "none") {
+      document.getElementById("parrafo1").style.display = "none";
+    }
+  }, 3000);
+
+
+}
+
+function pasarIT() {
+  document.getElementById("principal").style.backgroundImage = "url(img/departamento.png)"
+  document.getElementById("puertaIT").style.display = "none";
+  document.getElementById("flecha2").style.display = "none";
+  document.getElementById("ventanaIT").style.display = "none";
+  const elemento = document.getElementById("parrafo1");
+  let oculto = document.getElementById("parrafo1").style.display;
+  document.getElementById("parrafo1").style.display = "block";
+  document.getElementById("barra").style.display = "block";
+
+  const contenidoOriginal = elemento.innerHTML;
+  elemento.innerHTML = "Buscaré algo que me sirva de ayuda";
+  setTimeout(() => {
+    elemento.innerHTML = contenidoOriginal;
+    if (oculto == "none") {
+      document.getElementById("parrafo1").style.display = "none";
+    }
+  }, 3000);
+
+  document.getElementById("llaveBanio").style.display = "block";
+  document.getElementById("flecha3").style.display = "block";
+
+}
+
+
+
+function cogerLlave() {
+  document.getElementById("slot1").style.backgroundImage = "url('img/llave.png')";
+  document.getElementById("llaveBanio").style.display = "none";
+  tieneLlaveBanio = true;  
+}
+
+
+function cogerBarra() {
+ document.getElementById("slot2").style.backgroundImage ="url('../img/barra\ con\ color\ sin\ fondo.png')";
+  document.getElementById("barra").style.display = "none";
+
+
+
+}
+
+ function EscenaBanio(){
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena4.png)"
+document.getElementById("puertaBanio").style.display = "none";
+document.getElementById("puerta1").style.display = "none";
+document.getElementById("puerta2").style.display = "none";
+document.getElementById("flecha1").style.display = "none";
+document.getElementById("flecha4").style.display = "block";
+
+
+
+
+
+
+ }

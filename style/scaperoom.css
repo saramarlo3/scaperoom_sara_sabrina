@@ -32,6 +32,8 @@ body {
   height: 100dvh;
   width: 100vw;
   position: relative;
+  display: none;
+
 
 }
 
@@ -40,6 +42,7 @@ body {
   height: 100dvh;
   width: 100vw;
   position: relative;
+  display: none;
 
 
 }
@@ -63,6 +66,8 @@ body {
   position: absolute;
   left: 21%;
   top: 4%;
+  border: 2px solid red;
+
 
 }
 
@@ -72,17 +77,23 @@ body {
   background-color: transparent;
   position: absolute;
   right: 30%;
-  top: 53%;
+  top: 52%;
+  border: 2px solid red;
+
 }
 
 .corcho {
-  width: 3%;
-  height: 8%;
-  background-color: transparent;
+  width: 5%;
+  height: 11%;
   position: absolute;
-  right: 2%;
-  top: 20%;
-  border: 5px  solid black;
+  left: 94.5%;
+  top: 17%;
+  background-image: url("../img/corcho.png");
+   
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 .llave {
@@ -91,10 +102,16 @@ body {
   background-color: transparent;
   position: absolute;
   right: 2%;
-  border: 5px  solid black;
+  background-image: url("../img/llave.png");
+  border: 5px solid black;
   top: 20%;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
+
 .puerta1 {
   width: 1.6%;
   height: 3%;
@@ -102,35 +119,159 @@ body {
   position: absolute;
   right: 63.5%;
   top: 49%;
-   border: 2px  solid red;
+  border: 2px solid red;
 }
+
 .puerta2 {
   width: 0.5%;
   height: 1%;
   background-color: transparent;
   position: absolute;
   right: 37.8%;
-  top: 45%;
-   border: 2px  solid red;
+  top: 44%;
+  border: 2px solid red;
 }
+
 .puertaBanio {
   width: 0.3%;
   height: 1.8%;
   background-color: transparent;
   position: absolute;
   right: 29.3%;
-  top: 46%;
-   border: 2px  solid red;
+  top: 45%;
+  border: 2px solid red;
+
 }
-.flecha {
-  width: 0.3%;
-  height: 1.8%;
+
+
+
+.flecha1 {
+  width: 2%;
+  height: 2%;
+  background-color: transparent;
+  background-size: 120%;
+  position: absolute;
+  right: 32%;
+  top: 58%;
+
+  background-image: url("../img/flecha.png");
+  transform: rotate(180deg);
+  display: none;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.flecha2 {
+  width: 4%;
+  height: 10%;
   background-color: transparent;
   position: absolute;
-  right: 29.3%;
-  top: 46%;
-   border: 2px  solid red;
+  right: 50%;
+  top: 80%;
+
+  background-image: url("../img/flecha.png");
+  transform: rotate(90deg);
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.flecha3 {
+  width: 8%;
+  height: 5%;
+  background-color: transparent;
+  position: absolute;
+  right: 10%;
+  top: 85%;
+
+  background-image: url("../img/flecha.png");
+  display: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.puertaIT {
+  width: 1.8%;
+  height: 3.5%;
+  background-color: transparent;
+  position: absolute;
+  right: 59.8%;
+  top: 21%;
+  border: 2px solid green;
+  display: none;
+}
+
+.ventanaIT {
+  width: 10.5%;
+  height: 15%;
+  background-color: transparent;
+  position: absolute;
+  right: 43%;
+  top: 2%;
+  border: 2px solid green;
+  display: none;
+}
+
+.llaveBanio {
+  width: 1.5%;
+  height: 4%;
+  background-color: transparent;
+  position: absolute;
+  right: 70%;
+  border: 2px solid blue;
+  top: 30%;
+  display: none;
+  background-image: url("../img/llave.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+
+}
+
+.barra {
+  width: 8%;
+  height: 10%;
+  background-color: transparent;
+  position: absolute;
+  right: 50%;
+  border: 2px solid blue;
+  top: 30%;
+  display: none;
+  background-image: url("../img/barra\ con\ color\ sin\ fondo.png");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: right;
+
+}
+
+#inventario {
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid goldenrod;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.slot {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid goldenrod;
+  border-radius: 6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 
 /* CSS DE REFERENCIA
 
