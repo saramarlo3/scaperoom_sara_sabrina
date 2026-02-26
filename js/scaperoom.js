@@ -38,6 +38,7 @@ document.getElementById("flecha2").style.display = "none";
 document.getElementById("llaveBanio").style.display = "none";
 document.getElementById("barra").style.display = "none";
 document.getElementById("inventario").style.display = "none";
+document.getElementById("flechaClase").style.display = "none";
 
 
 
@@ -48,14 +49,26 @@ document.getElementById("inventario").style.display = "none";
 
 
 //Escena 1, clase
+function inicio() {
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena1.png)";
+  document.getElementById("pizarra").style.display = "block";
+  document.getElementById("papel").style.display = "block";
+  document.getElementById("corcho").style.display = "block";
+  document.getElementById("puertaBanio").style.display = "none";
+  document.getElementById("puerta1").style.display = "none";
+  document.getElementById("puerta2").style.display = "none";
+  document.getElementById("flecha1").style.display = "none";
+  document.getElementById("flechaClase").style.display = "none";
+  document.getElementById("parrafo1").style.display = "none";
+}
 
 function pizarra() {
 
   document.getElementById("principal").style.display = "none";
   document.getElementById("pizarraGrande").style.display = "block";
-  document.getElementById("pizarraGrande").style.backgroundImage = "url('img/pizarra.png')";
+  document.getElementById("pizarraGrande").style.backgroundImage = "url('img/pizarra.jpg')";
   document.getElementById("parrafo1").style.display = "block";
-  document.getElementById("parrafo1").innerHTML = "Debería buscar la llave de la puerta";
+  document.getElementById("parrafo1").innerHTML = "Seguro que se fué a la cafeteria pero la puerta esta cerrada con llave";
 
 }
 function noPizarra() {
@@ -90,7 +103,7 @@ function corcho() {
   document.getElementById("corcho").style.display = "none";
   document.getElementById("llave").style.display = "block";
   document.getElementById("parrafo1").style.display = "block";
-  document.getElementById("parrafo1").innerHTML = "¡¡La llave de la puerta de aula!!";
+  document.getElementById("parrafo1").innerHTML = "¡¡La llave de la puerta del aula!!";
 
 
 }
@@ -117,6 +130,7 @@ function pasillo() {
   document.getElementById("puertaBanio").style.display = "block";
   document.getElementById("puerta1").style.display = "block";
   document.getElementById("puerta2").style.display = "block";
+  document.getElementById("flechaClase").style.display = "block";
 
   document.getElementById("flecha1").style.display = "block";
    document.getElementById("llaveBanio").style.display = "none";
@@ -180,6 +194,7 @@ function pasilloMini() {
   document.getElementById("llaveBanio").style.display = "none";
   document.getElementById("flecha3").style.display = "none";
   document.getElementById("barra").style.display = "none";
+  document.getElementById("flechaClase").style.display = "none";
 
 
 
@@ -253,6 +268,7 @@ document.getElementById("puerta1").style.display = "none";
 document.getElementById("puerta2").style.display = "none";
 document.getElementById("flecha1").style.display = "none";
 document.getElementById("flecha4").style.display = "block";
+document.getElementById("flechaClase").style.display = "none";
 
 
 

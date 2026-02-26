@@ -28,23 +28,27 @@ body {
 }
 
 #pizarraGrande {
-
   height: 100dvh;
   width: 100vw;
   position: relative;
   display: none;
-
-
+  background-image: url("../img/pizarra.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
 }
 
 #papelGrande {
-
   height: 100dvh;
   width: 100vw;
   position: relative;
   display: none;
-
-
+  background-image: url("../img/papel.png");
+  background-size: contain;       /* ← no se recorta */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;        /* ← rellena los huecos laterales */
 }
 
 .mensaje {
@@ -193,6 +197,21 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+.flecha4 {
+  width: 8%;
+  height: 5%;
+  background-color: transparent;
+  position: absolute;
+  right: 10%;
+  top: 85%;
+
+  background-image: url("../img/flecha.png");
+  display: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
 
 .puertaIT {
   width: 1.8%;
@@ -217,13 +236,13 @@ body {
 }
 
 .llaveBanio {
-  width: 1.5%;
-  height: 4%;
+  width: 1%;
+  height: 3%;
   background-color: transparent;
   position: absolute;
   right: 70%;
-  border: 2px solid blue;
-  top: 30%;
+  
+  top: 31%;
   display: none;
   background-image: url("../img/llave.png");
   background-size: 100%;
@@ -233,18 +252,18 @@ body {
 }
 
 .barra {
-  width: 8%;
-  height: 10%;
+  width: 4%;
+  height: 5%;
   background-color: transparent;
   position: absolute;
-  right: 50%;
-  border: 2px solid blue;
-  top: 30%;
+  right: 54%;
+
+  top: 55%;
   display: none;
   background-image: url("../img/barra\ con\ color\ sin\ fondo.png");
   background-size: 120%;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top;
 
 }
 
@@ -269,6 +288,20 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.flechaClase {
+  width: 3%;
+  height: 5%;
+  background-color: transparent;
+  position: absolute;
+  left: 65%;
+  top: 90%;
+  background-image: url("../img/flecha.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(108deg);
+  display: none;
 }
 
 
