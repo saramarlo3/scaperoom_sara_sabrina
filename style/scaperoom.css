@@ -354,3 +354,70 @@ body {
 
 
 }
+.candado {
+  width: 70px;
+  height: 45px;
+
+  border: 3px solid red;
+
+  position: absolute;
+  left: 57%;
+  top: 59%;
+  display: none;
+  cursor: pointer;
+}
+
+.flecha5 {
+  width: 8%;
+  height: 5%;
+  background-color: transparent;
+  position: absolute;
+  right: 10%;
+  top: 85%;
+  background-image: url("../img/flecha.png");
+  display: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid red;
+}
+
+#panelCodigo {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #357D86;
+  border: 5px solid goldenrod ;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  z-index: 10;
+}
+
+#inputCodigo {
+  font-family: Gamer;
+  font-size: xx-large;
+  width: 100px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 6px;
+  border: 2px solid goldenrod;
+  background-color: #222;
+  color: white;
+}
+
+#panelCodigo button {
+  font-family: Gamer;
+  font-size: x-large;
+  margin: 5px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid goldenrod;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}

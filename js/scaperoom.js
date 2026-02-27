@@ -7,6 +7,9 @@ document.addEventListener('wheel', function (e) {
 
 let tieneLlaveBanio = false;
 let estaAbiertoElBanio = false; 
+let tieneBarra = false;
+let intentosCodigo = 3;
+let estaAbiertaVentana = false;
 
 document.getElementById("puertaBanio").style.display = "none";
 document.getElementById("puertaBanioAbierta").style.display = "none";
@@ -19,6 +22,7 @@ document.getElementById("ventanaBanio").style.display = "none";
 document.getElementById("llave").style.display = "none";
 document.getElementById("flecha1").style.display = "none";
 document.getElementById("flecha2").style.display = "none";
+document.getElementById("flecha3").style.display = "none";
 document.getElementById("llaveBanio").style.display = "none";
 document.getElementById("barra").style.display = "none";
 document.getElementById("ventanaBanio").style.display = "none";
@@ -126,6 +130,7 @@ function pasillo() {
   document.getElementById("ventanaBanio").style.display = "none";
   document.getElementById("puertaBanio1").style.display = "none";
 document.getElementById("puertaBanio2").style.display = "none";
+document.getElementById("flecha3").style.display = "none";
 
 
 
@@ -244,36 +249,130 @@ function cogerLlave() {
 
 
 function cogerBarra() {
- document.getElementById("slot2").style.backgroundImage ="url('../img/barra\ con\ color\ sin\ fondo.png')";
+  document.getElementById("slot2").style.backgroundImage = "url('../img/barra con color sin fondo.png')";
   document.getElementById("barra").style.display = "none";
-
-
-
+  tieneBarra = true; 
 }
 
- function EscenaBanio(){
-  document.getElementById("principal").style.backgroundImage = "url(img/Escena4.png)"
-document.getElementById("puertaBanio").style.display = "none";
-document.getElementById("puerta1").style.display = "none";
-document.getElementById("puerta2").style.display = "none";
-document.getElementById("flecha1").style.display = "none";
-document.getElementById("flecha4").style.display = "block";
-document.getElementById("flechaClase").style.display = "none";
-document.getElementById("ventanaBanio").style.display = "block";
-document.getElementById("puertaBanio1").style.display = "block";
-document.getElementById("puertaBanio2").style.display = "block";
+function EscenaBanio(){
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena4.png)";
+  document.getElementById("puertaBanio").style.display = "none";
+  document.getElementById("puerta1").style.display = "none";
+  document.getElementById("puerta2").style.display = "none";
+  document.getElementById("flecha1").style.display = "none";
+  document.getElementById("flecha3").style.display = "none";
+  document.getElementById("flecha4").style.display = "block";
+  document.getElementById("flechaClase").style.display = "none";
+  document.getElementById("ventanaBanio").style.display = "block";
+  document.getElementById("puertaBanio1").style.display = "block";
+  document.getElementById("puertaBanio2").style.display = "block";
+  document.getElementById("panelCodigo").style.display = "none";
+  document.getElementById("candado").style.display = "none";      // ← añadido
+  document.getElementById("flecha5").style.display = "none";     // ← añadido
+}
+
+// Sustituye o añade la función salida()
+function salida() {
+  document.getElementById("principal").style.backgroundImage = "none";
+ document.getElementById("principal").style.backgroundImage = "url(img/valla.png)";
+  document.getElementById("ventanaBanio").style.display = "none";
+  document.getElementById("puertaBanio1").style.display = "none";
+  document.getElementById("puertaBanio2").style.display = "none";
+  document.getElementById("flecha4").style.display = "none";
+  document.getElementById("candado").style.display = "block";
+  document.getElementById("flecha5").style.display = "block";
+ document.getElementById("parrafo1").style.display = "block";
+document.getElementById("parrafo1").innerHTML = "Hay un candado en la verja... necesito el código";
+setTimeout(() => {
+  document.getElementById("parrafo1").style.display = "none";
+}, 3000);
+}
+
+function mostrarCodigo() {
+  document.getElementById("panelCodigo").style.display = "block";
+  document.getElementById("mensajeCodigo").innerHTML = "";
+  document.getElementById("inputCodigo").value = "";
+}
+
+function cerrarPanel() {
+  document.getElementById("panelCodigo").style.display = "none";
+}
+
+function comprobarCodigo() {
+  const codigo = document.getElementById("inputCodigo").value;
+  if (codigo === "738") {
+    document.getElementById("panelCodigo").style.display = "none";
+    intentosCodigo = 3; // resetea por si acaso
+    victoria();
+  } else {
+    intentosCodigo--;
+    document.getElementById("intentosTexto").style.display = "none";
+    document.getElementById("inputCodigo").value = "";
+    if (intentosCodigo <= 0) {
+      document.getElementById("panelCodigo").style.display = "none";
+      gameOver();
+    } else {
+      document.getElementById("mensajeCodigo").innerHTML = 
+        `Código incorrecto... Te quedan ${intentosCodigo} intento${intentosCodigo === 1 ? "" : "s"}`;
+    }
+  }
+}
+function gameOver() {
+  document.getElementById("principal").style.backgroundImage = "none";
+  document.getElementById("principal").style.backgroundColor = "#0a0a0a";
+  document.getElementById("candado").style.display = "none";
+  document.getElementById("flecha5").style.display = "none";
+  document.getElementById("parrafo1").style.display = "none";
+  document.getElementById("inventario").style.display = "none";
+
+  const msg = document.createElement("div");
+  msg.style.cssText = `
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; color: red;
+    font-family: Gamer; font-size: 4vw;
+  `;
+  msg.innerHTML = "💀 Has fallado los 3 intentos...<br><br>Recarga la página para intentarlo de nuevo";
+  document.getElementById("principal").appendChild(msg);
+}
+
+function victoria() {
+  document.getElementById("principal").style.backgroundImage = "none";
+  document.getElementById("principal").style.backgroundColor = "#0a0a0a";
+  document.getElementById("candado").style.display = "none";
+  document.getElementById("flecha5").style.display = "none";
+  document.getElementById("parrafo1").style.display = "none";
+  document.getElementById("inventario").style.display = "none";
 
 
+  const msg = document.createElement("div");
+  msg.style.cssText = `
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; color: goldenrod;
+    font-family: Gamer; font-size: 4vw;
+  `;
+  msg.innerHTML = "¡Has escapado! ";
+  document.getElementById("principal").appendChild(msg);
+}
 
-
-
-
- }
-
- 
-
-
-
-
-
- }
+function ventanaCerrada() {
+  if (tieneBarra || estaAbiertaVentana) {
+    if (!estaAbiertaVentana) {
+      document.getElementById("slot2").style.backgroundImage = "none";
+      tieneBarra = false;
+      estaAbiertaVentana = true; // ← marca la ventana como abierta
+    }
+    salida();
+  } else {
+    const elemento = document.getElementById("parrafo1");
+    let oculto = elemento.style.display;
+    elemento.style.display = "block";
+    const contenidoOriginal = elemento.innerHTML;
+    elemento.innerHTML = "Necesito algo para abrirla";
+    setTimeout(() => {
+      elemento.innerHTML = contenidoOriginal;
+      if (oculto == "none") elemento.style.display = "none";
+    }, 3000);
+  }
+}
