@@ -144,6 +144,38 @@ function pasillo() {
   document.getElementById("flechaClase").style.display = "block";
     document.getElementById("flecha4").style.display = "none";
 
+  document.getElementById("flecha1").style.display = "none";
+   document.getElementById("llaveBanio").style.display = "none";
+
+  document.getElementById("barra").style.display = "none";
+  document.getElementById("ventanaBanio").style.display = "none";
+  document.getElementById("puertaBanio1").style.display = "none";
+document.getElementById("puertaBanio2").style.display = "none";
+document.getElementById("flecha3").style.display = "none";
+  document.getElementById("flecha6").style.display = "none";
+
+
+
+
+
+}
+function pasillo2() {
+
+  document.getElementById("pizarra").style.display = "none";
+  document.getElementById("papel").style.display = "none";
+  document.getElementById("corcho").style.display = "none";
+  document.getElementById("llave").style.display = "none";
+  document.getElementById("puertaIT").style.display = "none";
+  document.getElementById("flecha2").style.display = "none";
+  document.getElementById("ventanaIT").style.display = "none";
+  document.getElementById("principal").style.backgroundImage = "url(img/Escena2.png)"
+  document.getElementById("parrafo1").style.display = "none";
+  document.getElementById("puertaBanio").style.display = "block";
+  document.getElementById("puerta1").style.display = "block";
+  document.getElementById("puerta2").style.display = "block";
+  document.getElementById("flechaClase").style.display = "block";
+    document.getElementById("flecha4").style.display = "none";
+
   document.getElementById("flecha1").style.display = "block";
    document.getElementById("llaveBanio").style.display = "none";
 
@@ -161,6 +193,7 @@ document.getElementById("flecha3").style.display = "none";
 }
 
 function puertaCerrada() {
+ 
   const elemento = document.getElementById("parrafo1");
   let oculto = document.getElementById("parrafo1").style.display;
   document.getElementById("parrafo1").style.display = "block";
@@ -179,6 +212,7 @@ function puertaCerrada() {
 }
 
 function necesitoLlave() {
+   document.getElementById("flecha1").style.display = "block";
   if (estaAbiertoElBanio) {
     EscenaBanio(); // ← nombre correcto de tu función
   } else if (tieneLlaveBanio) {
