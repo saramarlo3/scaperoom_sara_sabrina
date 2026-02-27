@@ -5,11 +5,14 @@ document.addEventListener('wheel', function (e) {
   }
 }, { passive: false });
 
+
+
 let tieneLlaveBanio = false;
 let estaAbiertoElBanio = false; 
 let tieneBarra = false;
 let intentosCodigo = 3;
 let estaAbiertaVentana = false;
+
 
 document.getElementById("puertaBanio").style.display = "none";
 document.getElementById("puertaBanioAbierta").style.display = "none";
@@ -29,6 +32,7 @@ document.getElementById("ventanaBanio").style.display = "none";
 document.getElementById("flechaClase").style.display = "none";
 document.getElementById("puertaBanio1").style.display = "none";
 document.getElementById("puertaBanio2").style.display = "none";
+    document.getElementById("flecha6").style.display = "none";
 
 
 
@@ -44,14 +48,17 @@ function inicio() {
   document.getElementById("principal").style.backgroundImage = "url(img/Escena1.png)";
   document.getElementById("pizarra").style.display = "block";
   document.getElementById("papel").style.display = "block";
-  document.getElementById("corcho").style.display = "block";
+  document.getElementById("corcho").style.display = "none";
+    document.getElementById("llave").style.display = "none";
   document.getElementById("puertaBanio").style.display = "none";
   document.getElementById("puerta1").style.display = "none";
   document.getElementById("puerta2").style.display = "none";
   document.getElementById("flecha1").style.display = "none";
   document.getElementById("flechaClase").style.display = "none";
   document.getElementById("parrafo1").style.display = "none";
+    document.getElementById("flecha6").style.display = "block";
 }
+
 
 function pizarra() {
 
@@ -145,6 +152,7 @@ function pasillo() {
   document.getElementById("puertaBanio1").style.display = "none";
 document.getElementById("puertaBanio2").style.display = "none";
 document.getElementById("flecha3").style.display = "none";
+  document.getElementById("flecha6").style.display = "none";
 
 
 
@@ -270,7 +278,7 @@ function cogerLlave() {
 
 
 function cogerBarra() {
-  document.getElementById("slot2").style.backgroundImage = "url('../img/barra.png')";
+  document.getElementById("slot2").style.backgroundImage = "url('img/barra.png')";
   document.getElementById("barra").style.display = "none";
   tieneBarra = true; 
 }
