@@ -77,11 +77,24 @@ function papel() {
   document.getElementById("papelGrande").style.display = "block";
   document.getElementById("papelGrande").style.backgroundImage = "url('img/papel.png')";
   document.getElementById("parrafo1").style.display = "none";
+   const elemento = document.getElementById("parrafo1");
+  let oculto = document.getElementById("parrafo1").style.display;
+  document.getElementById("parrafo1").style.display = "block";
+
+  const contenidoOriginal = elemento.innerHTML;
+  elemento.innerHTML = "Nada, sólo son garabatos del profesor";
+  setTimeout(() => {
+    elemento.innerHTML = contenidoOriginal;
+    if (oculto == "none") {
+      document.getElementById("parrafo1").style.display = "none";
+    }
+  }, 2000);
 
 }
 function noPapel() {
   document.getElementById("principal").style.display = "block";
   document.getElementById("papelGrande").style.display = "none";
+  
 
 
 }
@@ -122,6 +135,7 @@ function pasillo() {
   document.getElementById("puerta1").style.display = "block";
   document.getElementById("puerta2").style.display = "block";
   document.getElementById("flechaClase").style.display = "block";
+    document.getElementById("flecha4").style.display = "none";
 
   document.getElementById("flecha1").style.display = "block";
    document.getElementById("llaveBanio").style.display = "none";
@@ -216,14 +230,13 @@ function verVentanaIT() {
 }
 
 function pasarIT() {
-  document.getElementById("principal").style.backgroundImage = "url(img/departamento.png)"
+  document.getElementById("principal").style.backgroundImage = "url(img/departamento.png)";
   document.getElementById("puertaIT").style.display = "none";
   document.getElementById("flecha2").style.display = "none";
   document.getElementById("ventanaIT").style.display = "none";
   const elemento = document.getElementById("parrafo1");
   let oculto = document.getElementById("parrafo1").style.display;
   document.getElementById("parrafo1").style.display = "block";
-  document.getElementById("barra").style.display = "block";
 
   const contenidoOriginal = elemento.innerHTML;
   elemento.innerHTML = "Buscaré algo que me sirva de ayuda";
@@ -234,9 +247,17 @@ function pasarIT() {
     }
   }, 3000);
 
-  document.getElementById("llaveBanio").style.display = "block";
-  document.getElementById("flecha3").style.display = "block";
+  // Solo muestra la llave si no se ha cogido ya
+  if (!tieneLlaveBanio && !estaAbiertoElBanio) {
+    document.getElementById("llaveBanio").style.display = "block";
+  }
 
+  // Solo muestra la barra si no se ha cogido ya
+  if (!tieneBarra && !estaAbiertaVentana) {
+    document.getElementById("barra").style.display = "block";
+  }
+
+  document.getElementById("flecha3").style.display = "block";
 }
 
 
