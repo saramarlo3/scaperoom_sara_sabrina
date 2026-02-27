@@ -1,20 +1,4 @@
-/*
-* ESCENAS:
-*   - ESCENA1: Se ve la pizarra del aula Ateca, com si fuese una alumna
-*   - ESCENA2: Se ve la pizarra ampliada
-*   - ESCENA3: Se ve el pasillo
-*   - ESCENA4: Se ve el departamento de informática
-*   - ESCENA5: Se ve el baño
-*/
 
-/*
-*  NOTA IMPORTANTE:
-*  A diferencia de CSS, donde las rutas relativas lo son desde la localización del fichero CSS,
-*  las rutas relativas en un JavaScript, aunque esté en fichero aparte, lo son desde la raiz del proyecto !!!!!
-*/
-
-
-//Esta funcion es para que no se pueda hacer zoom con el control
 document.addEventListener('wheel', function (e) {
   if (e.ctrlKey) {
     e.preventDefault();
@@ -37,8 +21,11 @@ document.getElementById("flecha1").style.display = "none";
 document.getElementById("flecha2").style.display = "none";
 document.getElementById("llaveBanio").style.display = "none";
 document.getElementById("barra").style.display = "none";
-document.getElementById("inventario").style.display = "none";
+document.getElementById("ventanaBanio").style.display = "none";
 document.getElementById("flechaClase").style.display = "none";
+document.getElementById("puertaBanio1").style.display = "none";
+document.getElementById("puertaBanio2").style.display = "none";
+
 
 
 
@@ -136,6 +123,9 @@ function pasillo() {
    document.getElementById("llaveBanio").style.display = "none";
 
   document.getElementById("barra").style.display = "none";
+  document.getElementById("ventanaBanio").style.display = "none";
+  document.getElementById("puertaBanio1").style.display = "none";
+document.getElementById("puertaBanio2").style.display = "none";
 
 
 
@@ -269,7 +259,18 @@ document.getElementById("puerta2").style.display = "none";
 document.getElementById("flecha1").style.display = "none";
 document.getElementById("flecha4").style.display = "block";
 document.getElementById("flechaClase").style.display = "none";
+document.getElementById("ventanaBanio").style.display = "block";
+document.getElementById("puertaBanio1").style.display = "block";
+document.getElementById("puertaBanio2").style.display = "block";
 
+
+
+
+
+
+ }
+
+ 
 
 
 
