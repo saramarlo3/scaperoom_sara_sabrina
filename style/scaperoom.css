@@ -36,7 +36,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: black;
+  
 }
 
 #papelGrande {
@@ -45,10 +45,10 @@ body {
   position: relative;
   display: none;
   background-image: url("../img/papel.png");
-  background-size: contain;       /* ← no se recorta */
+  background-size: contain;      
   background-repeat: no-repeat;
   background-position: center;
-  background-color: black;        /* ← rellena los huecos laterales */
+  background-color: black;       
 }
 
 .mensaje {
@@ -70,7 +70,8 @@ body {
   position: absolute;
   left: 21%;
   top: 4%;
-  border: 2px solid red;
+   border: 2px solid red;
+  
 
 
 }
@@ -82,7 +83,8 @@ body {
   position: absolute;
   right: 30%;
   top: 52%;
-  border: 2px solid red;
+   border: 2px solid red;
+  
 
 }
 
@@ -97,6 +99,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+   border: 2px solid red;
   
 }
 
@@ -107,12 +110,12 @@ body {
   position: absolute;
   right: 2%;
   background-image: url("../img/llave.png");
-  border: 5px solid black;
   top: 20%;
   display: none;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+   border: 2px solid red;
 
 }
 
@@ -121,8 +124,8 @@ body {
   height: 3%;
   background-color: transparent;
   position: absolute;
-  right: 63.5%;
-  top: 49%;
+  right: 1220px;
+  top: 510px;
   border: 2px solid red;
 }
 
@@ -132,7 +135,7 @@ body {
   background-color: transparent;
   position: absolute;
   right: 37.8%;
-  top: 44%;
+  top: 470px;
   border: 2px solid red;
 }
 
@@ -141,8 +144,8 @@ body {
   height: 1.8%;
   background-color: transparent;
   position: absolute;
-  right: 29.3%;
-  top: 45%;
+  right: 560px;
+  top: 475px;
   border: 2px solid red;
 
 }
@@ -157,6 +160,7 @@ body {
   position: absolute;
   right: 32%;
   top: 58%;
+   border: 2px solid red;
 
   background-image: url("../img/flecha.png");
   transform: rotate(180deg);
@@ -181,6 +185,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+   border: 2px solid red;
 }
 
 .flecha3 {
@@ -196,6 +201,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+   border: 2px solid red;
 }
 .flecha4 {
   width: 8%;
@@ -210,6 +216,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+   border: 2px solid red;
 
 }
 
@@ -218,19 +225,19 @@ body {
   height: 3.5%;
   background-color: transparent;
   position: absolute;
-  right: 59.8%;
-  top: 21%;
+  right: 1150px;
+  top: 250px;
   border: 2px solid green;
   display: none;
 }
 
 .ventanaIT {
   width: 10.5%;
-  height: 15%;
+  height: 14%;
   background-color: transparent;
   position: absolute;
-  right: 43%;
-  top: 2%;
+  right: 825px;
+  top: 70px;
   border: 2px solid green;
   display: none;
 }
@@ -248,7 +255,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: left;
-
+ border: 2px solid red;
 }
 
 .barra {
@@ -256,21 +263,21 @@ body {
   height: 5%;
   background-color: transparent;
   position: absolute;
-  right: 54%;
-
-  top: 55%;
+  right: 1030px;
+  top: 560px;
   display: none;
   background-image: url("../img/barra\ con\ color\ sin\ fondo.png");
-  background-size: 120%;
+  background-size: 135%;
   background-repeat: no-repeat;
   background-position: top;
+   border: 2px solid red;
 
 }
 
 #inventario {
   position: absolute;
   bottom: 80px;
-  right: 10px;
+  right: 50px;
   background-color: rgba(0, 0, 0, 0.7);
   border: 2px solid goldenrod;
   border-radius: 8px;
@@ -302,72 +309,48 @@ body {
   background-position: center;
   transform: rotate(108deg);
   display: none;
+   border: 2px solid red;
 }
 
-
-
-/* CSS DE REFERENCIA
-
-//FIJAMOS el ancho y la posición de la escena y de los mensajes
-
-.escena, .mensaje {
-  width: 480px;
-  margin: auto;
-}
-
-//La escena tendrá como fondo la mansión, ¡¡ sólo al cargar la página !!
-
-.escena {
-  height: 784px;
-  margin: auto;
-  background-image: url("../img/mansion.jpg"); /* Imagen de Wombo Dream
-  background-size:cover;
-  position: relative;
-}
-.mensaje {
-  font-family: "ComicKids-WyvKG";
-  background-color: white;
-  padding: 3px;
-}
-
-.mensaje p {
-  margin-left: 10px;
-}
-
-.puerta {
-  width: 14px;
-  height: 49px;
+.ventanaBanio{
+    width: 25px;
+  height: 100px;
   background-color: transparent;
   position: absolute;
-  left:304px;
-  top: 479px;
-}
-.interruptor {
-  display: none; /* Inicialmente no se verá el interruptor
-  width: 16px;
-  height: 34px;
-  background-image: url("../img/interruptor_oscuro.png");
-  background-size: cover;
-  position: absolute;
-  left:385px;
-  top: 402px;
-}
-// Coloca la pata en la escena de forma discreta, que no se vea fácil
-.pata {
-  display: none; //Inicialmente no se verá la pata
-  width: 11px;
-  height: 12px;
-  background-image: url("../img/pata.png"); 
-  background-size: cover;
-  position: absolute;
-  left:346px;
-  top: 607px;
-}
+  right: 1240px;
+  top: 18px;
+  display: none;
+  background-repeat: no-repeat;
+  background-position: top;
+   border: 2px solid red;
 
-// Este es Togo, visualízado encima de la alfombr
-.togo {
- //PON AQUÍ EL CSS DE TOGO
- display: none; /* Inicialmente no se visualiza
-}
 
-*/
+}
+.puertaBanio1{
+    width: 25px;
+  height: 100px;
+  background-color: transparent;
+  position: absolute;
+  right: 540px;
+  top: 550px;
+  display: none;
+  background-repeat: no-repeat;
+  background-position: top;
+   border: 2px solid red;
+
+
+}
+.puertaBanio2{
+    width: 80px;
+  height: 150px;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 740px;
+  display: none;
+  background-repeat: no-repeat;
+  background-position: top;
+   border: 2px solid red;
+
+
+}
