@@ -270,7 +270,7 @@ function cogerLlave() {
 
 
 function cogerBarra() {
-  document.getElementById("slot2").style.backgroundImage = "url('../img/barra.png')";
+  document.getElementById("slot2").style.backgroundImage = "url('img/barra.png')";
   document.getElementById("barra").style.display = "none";
   tieneBarra = true; 
 }
