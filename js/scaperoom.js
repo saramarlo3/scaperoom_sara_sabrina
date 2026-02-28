@@ -175,6 +175,7 @@ function pasillo2() {
   document.getElementById("puerta2").style.display = "block";
   document.getElementById("flechaClase").style.display = "block";
     document.getElementById("flecha4").style.display = "none";
+ 
 
   document.getElementById("flecha1").style.display = "block";
    document.getElementById("llaveBanio").style.display = "none";

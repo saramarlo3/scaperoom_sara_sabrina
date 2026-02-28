@@ -70,7 +70,7 @@ body {
   position: absolute;
   left: 21%;
   top: 10%;
-   border: 2px solid red;
+  
   
 
 
@@ -83,7 +83,7 @@ body {
   position: absolute;
   right: 30%;
   top: 51.5%;
-   border: 2px solid red;
+  
   
 
 }
@@ -93,13 +93,13 @@ body {
   height: 11%;
   position: absolute;
   left: 94.5%;
-  top: 17%;
+  top: 20%;
   background-image: url("../img/corcho.png");
    
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-   border: 2px solid red;
+   
   
 }
 
@@ -110,12 +110,12 @@ body {
   position: absolute;
   right: 2%;
   background-image: url("../img/llave.png");
-  top: 20%;
+  top: 25%;
   display: none;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-   border: 2px solid red;
+   
 
 }
 
@@ -126,7 +126,7 @@ body {
   position: absolute;
   right: 63.5%;
   top: 48%;
-  border: 2px solid red;
+  
 }
 
 .puerta2 {
@@ -136,7 +136,7 @@ body {
   position: absolute;
   right: 37.8%;
   top: 45%;
-  border: 2px solid red;
+ 
 }
 
 .puertaBanio {
@@ -146,7 +146,7 @@ body {
   position: absolute;
   right: 29.3%;
   top: 46%;
-  border: 2px solid red;
+ 
 
 }
 
@@ -160,7 +160,7 @@ body {
   position: absolute;
   right: 32%;
   top: 58%;
-   border: 2px solid red;
+ 
 
   background-image: url("../img/flecha.png");
   transform: rotate(180deg);
@@ -185,7 +185,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-   border: 2px solid red;
+   
 }
 
 .flecha3 {
@@ -215,7 +215,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-   border: 2px solid red;
+  
 
 }
 .flecha6 {
@@ -230,7 +230,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-   border: 2px solid red;
+   
 
 }
 
@@ -323,7 +323,7 @@ body {
   background-position: center;
   transform: rotate(108deg);
   display: none;
-   border: 2px solid red;
+  
 }
 
 .ventanaBanio{
@@ -371,10 +371,7 @@ body {
 .candado {
   width: 5%;
   height: 4%;
-
-  border: 3px solid red;
-
-  position: absolute;
+ position: absolute;
   left: 56.5%;
   top: 58%;
   display: none;
@@ -392,7 +389,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid red;
+ 
 }
 
 #panelCodigo {
