@@ -17,9 +17,13 @@ let estaAbiertaVentana = false;
 
 
 function empezar() {
-  document.getElementById("parrafo1").style.display = "none";
   document.getElementById("botonEmpezar").style.display = "none";
   document.getElementById("principal").style.pointerEvents = "auto";
+  document.getElementById("parrafo1").style.display = "block";
+  document.getElementById("parrafo1").innerHTML = "Estás castigada en el aula Ateca y el profesor se fué hace más de una hora... Deberías intentar salir de aquí lo antes posible sin que te pillen";
+  setTimeout(() => {
+    document.getElementById("parrafo1").style.display = "none";
+  }, 10000);
 }
 
 
@@ -46,9 +50,7 @@ document.getElementById("puertaBanio1").style.display = "none";
 document.getElementById("puertaBanio2").style.display = "none";
     document.getElementById("flecha6").style.display = "none";
 
-    document.getElementById("parrafo1").style.display = "block";
-document.getElementById("parrafo1").innerHTML = "Estás castigada en el aula Ateca y el profesor se fué hace más de una hora... Deberías intentar salir de aquí lo antes posible sin que te pillen.";
-document.getElementById("botonEmpezar").style.display = "inline";
+   
 
 
 
@@ -82,7 +84,7 @@ function pizarra() {
   document.getElementById("pizarraGrande").style.display = "block";
   document.getElementById("pizarraGrande").style.backgroundImage = "url('img/pizarra.jpg')";
   document.getElementById("parrafo1").style.display = "block";
-  document.getElementById("parrafo1").innerHTML = "Seguro que se fué a la cafeteria pero la puerta esta cerrada con llave";
+  document.getElementById("parrafo1").innerHTML = "Y me deja un mensaje en la pizarra...<br> Seguro que se fué a la cafeteria pero la puerta está cerrada con llave";
 
 }
 function noPizarra() {
@@ -456,3 +458,8 @@ function ventanaCerrada() {
     }, 3000);
   }
 }
+
+document.getElementById("parrafo1").style.display = "block";
+document.getElementById("parrafo1").innerHTML = "Pulsa F11 para pantalla completa antes de empezar";
+document.getElementById("botonEmpezar").style.display = "inline";
+document.getElementById("principal").style.pointerEvents = "none";

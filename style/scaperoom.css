@@ -33,7 +33,7 @@ body {
   border-radius: 8px;
   border: 2px solid black;
   background-color: goldenrod;
-  margin-left: 47%;
+
   margin-bottom: 2%;
   cursor:pointer;
   
@@ -75,6 +75,7 @@ body {
   color: black;
   border-top: black solid;
   font-size: xxx-large;
+  text-align: center;
 }
 
 
