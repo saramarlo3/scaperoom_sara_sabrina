@@ -14,6 +14,18 @@ let intentosCodigo = 3;
 let estaAbiertaVentana = false;
 
 
+
+
+function empezar() {
+  document.getElementById("parrafo1").style.display = "none";
+  document.getElementById("botonEmpezar").style.display = "none";
+  document.getElementById("principal").style.pointerEvents = "auto";
+}
+
+
+
+
+document.getElementById("principal").style.pointerEvents = "none";
 document.getElementById("puertaBanio").style.display = "none";
 document.getElementById("puertaBanioAbierta").style.display = "none";
 document.getElementById("parrafo1").style.display = "none";
@@ -33,6 +45,10 @@ document.getElementById("flechaClase").style.display = "none";
 document.getElementById("puertaBanio1").style.display = "none";
 document.getElementById("puertaBanio2").style.display = "none";
     document.getElementById("flecha6").style.display = "none";
+
+    document.getElementById("parrafo1").style.display = "block";
+document.getElementById("parrafo1").innerHTML = "Estás castigada en el aula Ateca y el profesor se fué hace más de una hora... Deberías intentar salir de aquí lo antes posible sin que te pillen.";
+document.getElementById("botonEmpezar").style.display = "inline";
 
 
 
@@ -95,7 +111,7 @@ function papel() {
     if (oculto == "none") {
       document.getElementById("parrafo1").style.display = "none";
     }
-  }, 2000);
+  }, 3000);
 
 }
 function noPapel() {
@@ -396,7 +412,7 @@ function gameOver() {
     text-align: center; color: red;
     font-family: Gamer; font-size: 4vw;
   `;
-  msg.innerHTML = "💀 Has fallado los 3 intentos...<br><br>Recarga la página para intentarlo de nuevo";
+  msg.innerHTML = "💀 Has fallado los 3 intentos...<br><br>Recarga la página o pulsa F5 para intentarlo de nuevo";
   document.getElementById("principal").appendChild(msg);
 }
 
