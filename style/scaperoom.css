@@ -156,13 +156,13 @@ body {
 }
 
 .puertaBanio {
-  width: 0.3%;
-  height: 1.8%;
+  width: 1%;
+  height: 2%;
   background-color: transparent;
   position: absolute;
-  right: 29.3%;
-  top: 46%;
- 
+  right: 29%;
+  top: 45%;
+
 
 }
 
@@ -257,7 +257,6 @@ body {
   position: absolute;
   right: 59.8%;
   top: 24.5%;
-  border: 2px solid green;
   display: none;
 }
 
@@ -268,7 +267,6 @@ body {
   position: absolute;
   right: 43%;
   top: 8%;
-  border: 2px solid green;
   display: none;
 }
 
@@ -347,7 +345,7 @@ body {
   height: 100px;
   background-color: transparent;
   position: absolute;
-  right: 64%;
+  right: 64.5%;
   top: 2.5%;
   display: none;
   background-repeat: no-repeat;
