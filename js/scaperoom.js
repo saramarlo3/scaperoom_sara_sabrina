@@ -382,7 +382,7 @@ function cerrarPanel() {
 
 function comprobarCodigo() {
   const codigo = document.getElementById("inputCodigo").value;
-  if (codigo === "738") {
+  if (codigo === "387") {
     document.getElementById("panelCodigo").style.display = "none";
     intentosCodigo = 3; // resetea por si acaso
     victoria();
